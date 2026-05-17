@@ -38,6 +38,15 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Check Nitro modules
+        run: |
+          if [ -d "node_modules/react-native-nitro-modules" ]; then
+            echo "✓ Nitro modules found"
+          else
+            echo "⚠ Nitro modules not found - installing full dependencies"
+            npm ci
+          fi
+
       - name: Create Android keystore
         run: |
           mkdir -p $HOME/.android
@@ -50,7 +59,7 @@ jobs:
         run: |
           cd android
           chmod +x gradlew
-          ./gradlew assembleRelease --no-daemon -x lint
+          ./gradlew assembleRelease --no-daemon -x lint -Porg.gradle.jvmargs=-Xmx4096m
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
