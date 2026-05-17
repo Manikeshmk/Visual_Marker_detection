@@ -2,6 +2,109 @@
 
 A high-performance React Native Android application for real-time detection, extraction, and orientation correction of custom visual markers using advanced computer vision techniques.
 
+## 🎨 Custom Marker Design
+
+### Marker Specifications
+
+The application is optimized for a **300×300 pixel custom square marker** with the following design:
+
+**Visual Layout:**
+```
+┌──────────────────────────────────────┐
+│  Outer Black Border (8px)            │
+│  ┌────────────────────────────────┐  │
+│  │  Inner White Area (284×284px)  │  │
+│  │  ┌──────────────────────────┐  │  │
+│  │  │ 20×20px Black Square     │  │  │
+│  │  │ (Orientation Marker)     │  │  │
+│  │  │ Top-Left, 20px offset    │  │  │
+│  │  └──────────────────────────┘  │  │
+│  │                                 │  │
+│  │  Content: Animal Drawings       │  │
+│  │  (Black lines on white)         │  │
+│  │                                 │  │
+│  └────────────────────────────────┘  │
+└──────────────────────────────────────┘
+```
+
+**Technical Measurements:**
+
+| Component | Dimension | Color | Purpose |
+|-----------|-----------|-------|---------|
+| Total Size | 300×300 px | - | Output standardization |
+| Outer Border | 8px thick | #000000 | Boundary detection |
+| Inner White | 284×284 px | #FFFFFF | Content background |
+| Orientation Marker | 20×20 px | #000000 | Rotation detection |
+| Corner Offset | 20px from edge | - | Protection zone |
+| Content Area | 240×240 px | Varies | Animal drawings |
+
+**Generation Logic (Python PIL):**
+
+```python
+from PIL import Image, ImageDraw
+
+def create_marker(size=300, animal_func=None):
+    """Generate custom marker with animal drawing"""
+    img = Image.new('RGB', (size, size), color='white')
+    draw = ImageDraw.Draw(img)
+    
+    # Outer black border (8px)
+    border = 8
+    draw.rectangle([(0, 0), (size-1, size-1)], 
+                   outline='black', width=border)
+    
+    # Orientation marker (20×20 black square)
+    offset = 20
+    marker_size = 20
+    draw.rectangle([(offset, offset), 
+                    (offset + marker_size, offset + marker_size)],
+                   fill='black')
+    
+    # Draw animal content
+    if animal_func:
+        animal_func(img, draw)
+    
+    return img
+
+def draw_dog(img, draw):
+    """Stylized dog drawing"""
+    draw.ellipse([(120, 80), (180, 140)], outline='black', width=3)      # Head
+    draw.ellipse([(100, 60), (125, 85)], outline='black', width=2)       # Left ear
+    draw.ellipse([(175, 60), (200, 85)], outline='black', width=2)       # Right ear
+    draw.ellipse([(130, 100), (135, 105)], fill='black')                 # Left eye
+    draw.ellipse([(165, 100), (170, 105)], fill='black')                 # Right eye
+    draw.ellipse([(145, 120), (155, 130)], fill='black')                 # Nose
+    draw.rectangle([(125, 140), (175, 200)], outline='black', width=3)   # Body
+    draw.line([(130, 200), (130, 250)], fill='black', width=3)           # Legs
+    draw.line([(150, 200), (150, 250)], fill='black', width=3)
+    draw.line([(170, 200), (170, 250)], fill='black', width=3)
+    draw.line([(190, 200), (190, 250)], fill='black', width=3)
+```
+
+**Test Images:**
+
+✅ **Correct Markers (6 images):**
+- `marker_dog_0deg.png` - Standard orientation
+- `marker_dog_90deg.png` - Rotated 90° clockwise
+- `marker_dog_180deg.png` - Rotated 180°
+- `marker_dog_270deg.png` - Rotated 270°
+- `marker_cat_0deg.png` - Cat face
+- `marker_bird_0deg.png` - Bird drawing
+
+❌ **Incorrect Markers (3 images) - for validation testing:**
+- `marker_no_corner.png` - Missing orientation square
+- `marker_red_x.png` - Red X pattern (wrong content)
+- `marker_white.png` - Plain white (no content)
+
+All test images located in: `test-images/` directory
+
+**Design Advantages:**
+- ✓ 100% orientation robustness (all 4 rotations: 0°, 90°, 180°, 270°)
+- ✓ High contrast binary design (pure black/white only)
+- ✓ Corner marker survives perspective distortion
+- ✓ Fast detection via thresholding
+- ✓ Reliable validation via center intensity analysis
+
 ## Features
 
 ✨ **Real-Time Detection**
