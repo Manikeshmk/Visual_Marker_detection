@@ -10,8 +10,14 @@
     "test": "jest"
   },
   "dependencies": {
+    "@shopify/react-native-skia": "^2.6.2",
     "react": "19.0.0",
-    "react-native": "0.79.2"
+    "react-native": "0.79.2",
+    "react-native-fast-opencv": "^0.4.8",
+    "react-native-reanimated": "^3.16.7",
+    "react-native-vision-camera": "^5.0.9",
+    "react-native-worklets-core": "^1.6.3",
+    "vision-camera-resize-plugin": "^3.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
