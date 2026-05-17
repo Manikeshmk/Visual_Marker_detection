@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  builder:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./android/app/build/outputs:/outputs:rw
+      - ./node_modules:/workspace/node_modules
+    environment:
+      - ANDROID_HOME=/android-sdk
+      - JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+    working_dir: /workspace
+
+  build-release:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./android/app/build/outputs/apk/release:/outputs:ro
+    command: sh -c "cd android && ./gradlew assembleRelease --no-daemon && cp app/build/outputs/apk/release/app-release.apk /outputs/"
