@@ -73,3 +73,15 @@ yarn-error.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Generated/Unnecessary files
+generate_pdf.py
+create_pdf_direct.py
+TECHNICAL_APPROACH.html
+generate_test_markers.py
+QUICK_START.md
+MARKER_GENERATION.md
+DELIVERABLES.md
+Approach.md
+PROJECT_COMPLETION_SUMMARY.txt
+Gemfile
