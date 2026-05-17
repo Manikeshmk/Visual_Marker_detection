@@ -38,15 +38,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Check Nitro modules
-        run: |
-          if [ -d "node_modules/react-native-nitro-modules" ]; then
-            echo "✓ Nitro modules found"
-          else
-            echo "⚠ Nitro modules not found - installing full dependencies"
-            npm ci
-          fi
-
       - name: Create Android keystore
         run: |
           mkdir -p $HOME/.android
