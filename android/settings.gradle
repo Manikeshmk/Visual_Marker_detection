@@ -1,6 +1,12 @@
 pluginManagement { includeBuild("../node_modules/@react-native/gradle-plugin") }
 plugins { id("com.facebook.react.settings") }
 extensions.configure(com.facebook.react.ReactSettingsExtension){ ex -> ex.autolinkLibrariesFromCommand() }
+
+// Nitro modules for react-native-vision-camera
+if (findProject(':react-native-nitro-modules') == null) {
+    includeBuild('../node_modules/react-native-nitro-modules')
+}
+
 rootProject.name = 'MarkerDetector'
 include ':app'
 includeBuild('../node_modules/@react-native/gradle-plugin')
