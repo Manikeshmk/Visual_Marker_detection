@@ -1,3 +1,5 @@
+APK Link:
+
 # Custom Visual Marker Detector
 
 A high-performance React Native Android application for real-time detection, extraction, and orientation correction of custom visual markers using advanced computer vision techniques.
@@ -9,6 +11,7 @@ A high-performance React Native Android application for real-time detection, ext
 The application is optimized for a **300×300 pixel custom square marker** with the following design:
 
 **Visual Layout:**
+
 ```
 ┌──────────────────────────────────────┐
 │  Outer Black Border (8px)            │
@@ -29,14 +32,14 @@ The application is optimized for a **300×300 pixel custom square marker** with 
 
 **Technical Measurements:**
 
-| Component | Dimension | Color | Purpose |
-|-----------|-----------|-------|---------|
-| Total Size | 300×300 px | - | Output standardization |
-| Outer Border | 8px thick | #000000 | Boundary detection |
-| Inner White | 284×284 px | #FFFFFF | Content background |
-| Orientation Marker | 20×20 px | #000000 | Rotation detection |
-| Corner Offset | 20px from edge | - | Protection zone |
-| Content Area | 240×240 px | Varies | Animal drawings |
+| Component          | Dimension      | Color   | Purpose                |
+| ------------------ | -------------- | ------- | ---------------------- |
+| Total Size         | 300×300 px     | -       | Output standardization |
+| Outer Border       | 8px thick      | #000000 | Boundary detection     |
+| Inner White        | 284×284 px     | #FFFFFF | Content background     |
+| Orientation Marker | 20×20 px       | #000000 | Rotation detection     |
+| Corner Offset      | 20px from edge | -       | Protection zone        |
+| Content Area       | 240×240 px     | Varies  | Animal drawings        |
 
 **Generation Logic (Python PIL):**
 
@@ -47,23 +50,23 @@ def create_marker(size=300, animal_func=None):
     """Generate custom marker with animal drawing"""
     img = Image.new('RGB', (size, size), color='white')
     draw = ImageDraw.Draw(img)
-    
+
     # Outer black border (8px)
     border = 8
-    draw.rectangle([(0, 0), (size-1, size-1)], 
+    draw.rectangle([(0, 0), (size-1, size-1)],
                    outline='black', width=border)
-    
+
     # Orientation marker (20×20 black square)
     offset = 20
     marker_size = 20
-    draw.rectangle([(offset, offset), 
+    draw.rectangle([(offset, offset),
                     (offset + marker_size, offset + marker_size)],
                    fill='black')
-    
+
     # Draw animal content
     if animal_func:
         animal_func(img, draw)
-    
+
     return img
 
 def draw_dog(img, draw):
@@ -84,6 +87,7 @@ def draw_dog(img, draw):
 **Test Images:**
 
 ✅ **Correct Markers (6 images):**
+
 - `marker_dog_0deg.png` - Standard orientation
 - `marker_dog_90deg.png` - Rotated 90° clockwise
 - `marker_dog_180deg.png` - Rotated 180°
@@ -92,6 +96,7 @@ def draw_dog(img, draw):
 - `marker_bird_0deg.png` - Bird drawing
 
 ❌ **Incorrect Markers (3 images) - for validation testing:**
+
 - `marker_no_corner.png` - Missing orientation square
 - `marker_red_x.png` - Red X pattern (wrong content)
 - `marker_white.png` - Plain white (no content)
@@ -99,6 +104,7 @@ def draw_dog(img, draw):
 All test images located in: `test-images/` directory
 
 **Design Advantages:**
+
 - ✓ 100% orientation robustness (all 4 rotations: 0°, 90°, 180°, 270°)
 - ✓ High contrast binary design (pure black/white only)
 - ✓ Corner marker survives perspective distortion
