@@ -8,50 +8,241 @@
 
 <div align="center">
 
-### 📊 **Language Composition**
+# 🚀 Tech Stack
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-60.2%25-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
-[![Kotlin](https://img.shields.io/badge/Kotlin-13.3%25-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)](https://kotlinlang.org)
-[![Dockerfile](https://img.shields.io/badge/Dockerfile-9.7%25-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com)
-[![Swift](https://img.shields.io/badge/Swift-6.5%25-FA7343?style=for-the-badge&logo=swift&logoColor=white)](https://swift.org)
-[![Ruby](https://img.shields.io/badge/Ruby-5.5%25-CC342D?style=for-the-badge&logo=ruby&logoColor=white)](https://www.ruby-lang.org)
-[![JavaScript](https://img.shields.io/badge/JavaScript-4.8%25-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+## 📊 Languages
 
-### 🔧 **Framework Stack**
+<table>
+<tr>
 
-[![React](https://img.shields.io/badge/React-19.0.0-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev)
-[![React Native](https://img.shields.io/badge/React%20Native-0.79.2-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactnative.dev)
-[![Node.js](https://img.shields.io/badge/Node.js-≥18-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0.4-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+<td align="center" width="120">
+<img src="https://cdn.simpleicons.org/typescript/3178C6" width="55"/><br/><br/>
+<b>TypeScript</b><br/>
+<sub>60.2%</sub>
+</td>
 
-### 🖼️ **Vision & Native Stack**
+<td align="center" width="120">
+<img src="https://cdn.simpleicons.org/kotlin/7F52FF" width="55"/><br/><br/>
+<b>Kotlin</b><br/>
+<sub>13.3%</sub>
+</td>
 
-[![OpenCV](https://img.shields.io/badge/OpenCV-4.5-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)](https://opencv.org)
-[![Vision Camera](https://img.shields.io/badge/Vision%20Camera-4.0.0-FF6B6B?style=for-the-badge&logoColor=white)](https://github.com/mrousavy/react-native-vision-camera)
-[![Fast OpenCV](https://img.shields.io/badge/Fast%20OpenCV-0.4.8-5C3EE8?style=for-the-badge&logoColor=white)](https://github.com/react-native-fast-opencv/fast-opencv)
-[![Skia Graphics](https://img.shields.io/badge/Shopify%20Skia-2.6.2-96C93D?style=for-the-badge&logoColor=white)](https://github.com/shopify/react-native-skia)
-[![Reanimated](https://img.shields.io/badge/Reanimated-3.19.1-6200EE?style=for-the-badge&logoColor=white)](https://docs.swmansion.com/react-native-reanimated)
-[![Worklets](https://img.shields.io/badge/Worklets%20Core-1.6.3-FF6B6B?style=for-the-badge&logoColor=white)](https://github.com/margelo/react-native-worklets-core)
+<td align="center" width="120">
+<img src="https://cdn.simpleicons.org/docker/2496ED" width="55"/><br/><br/>
+<b>Dockerfile</b><br/>
+<sub>9.7%</sub>
+</td>
 
-### 📱 **Platform & Build**
+<td align="center" width="120">
+<img src="https://cdn.simpleicons.org/swift/FA7343" width="55"/><br/><br/>
+<b>Swift</b><br/>
+<sub>6.5%</sub>
+</td>
 
-[![Android](https://img.shields.io/badge/Android-API%2035+-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com)
-[![Android NDK](https://img.shields.io/badge/Android%20NDK-27.1.12297006-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com/ndk)
-[![Gradle](https://img.shields.io/badge/Gradle-Build-02303A?style=for-the-badge&logo=gradle&logoColor=white)](https://gradle.org)
-[![Xcode](https://img.shields.io/badge/Xcode-iOS%20Build-147EFB?style=for-the-badge&logo=xcode&logoColor=white)](https://developer.apple.com/xcode)
-[![Java](https://img.shields.io/badge/Java-17+-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.java.com)
+<td align="center" width="120">
+<img src="https://cdn.simpleicons.org/ruby/CC342D" width="55"/><br/><br/>
+<b>Ruby</b><br/>
+<sub>5.5%</sub>
+</td>
 
-### 🛠️ **Development & Testing**
+<td align="center" width="120">
+<img src="https://cdn.simpleicons.org/javascript/F7DF1E" width="55"/><br/><br/>
+<b>JavaScript</b><br/>
+<sub>4.8%</sub>
+</td>
 
-[![Babel](https://img.shields.io/badge/Babel-7.25.2-F9DC3E?style=for-the-badge&logo=babel&logoColor=white)](https://babeljs.io)
-[![Jest](https://img.shields.io/badge/Jest-29.6.3-C21325?style=for-the-badge&logo=jest&logoColor=white)](https://jestjs.io)
-[![ESLint](https://img.shields.io/badge/ESLint-8.19.0-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)](https://eslint.org)
-[![Prettier](https://img.shields.io/badge/Prettier-2.8.8-F7B93E?style=for-the-badge&logo=prettier&logoColor=white)](https://prettier.io)
+</tr>
+</table>
 
-### 🐳 **Deployment**
+---
 
-[![Docker](https://img.shields.io/badge/Docker-Build%20Support-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com)
-[![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-CI%2FCD-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/features/actions)
+## 🔧 Framework Stack
+
+<table>
+<tr>
+
+<td align="center" width="140">
+<img src="https://cdn.simpleicons.org/react/61DAFB" width="60"/><br/><br/>
+<b>React</b><br/>
+<sub>v19.0.0</sub>
+</td>
+
+<td align="center" width="140">
+<img src="https://cdn.simpleicons.org/react/61DAFB" width="60"/><br/><br/>
+<b>React Native</b><br/>
+<sub>v0.79.2</sub>
+</td>
+
+<td align="center" width="140">
+<img src="https://cdn.simpleicons.org/node.js/339933" width="60"/><br/><br/>
+<b>Node.js</b><br/>
+<sub>≥18</sub>
+</td>
+
+<td align="center" width="140">
+<img src="https://cdn.simpleicons.org/typescript/3178C6" width="60"/><br/><br/>
+<b>TypeScript</b><br/>
+<sub>v5.0.4</sub>
+</td>
+
+</tr>
+</table>
+
+---
+
+## 🖼️ Vision & Native Stack
+
+<table>
+<tr>
+
+<td align="center" width="150">
+<img src="https://cdn.simpleicons.org/opencv/5C3EE8" width="60"/><br/><br/>
+<b>OpenCV</b><br/>
+<sub>v4.5</sub>
+</td>
+
+<td align="center" width="150">
+<img src="https://cdn.simpleicons.org/react/61DAFB" width="60"/><br/><br/>
+<b>Vision Camera</b><br/>
+<sub>v4.0.0</sub>
+</td>
+
+<td align="center" width="150">
+<img src="https://cdn.simpleicons.org/opencv/5C3EE8" width="60"/><br/><br/>
+<b>Fast OpenCV</b><br/>
+<sub>v0.4.8</sub>
+</td>
+
+</tr>
+
+<tr>
+
+<td align="center" width="150">
+<img src="https://cdn.simpleicons.org/shopify/96C93D" width="60"/><br/><br/>
+<b>Shopify Skia</b><br/>
+<sub>v2.6.2</sub>
+</td>
+
+<td align="center" width="150">
+<img src="https://cdn.simpleicons.org/react/6200EE" width="60"/><br/><br/>
+<b>Reanimated</b><br/>
+<sub>v3.19.1</sub>
+</td>
+
+<td align="center" width="150">
+<img src="https://cdn.simpleicons.org/react/FF6B6B" width="60"/><br/><br/>
+<b>Worklets Core</b><br/>
+<sub>v1.6.3</sub>
+</td>
+
+</tr>
+</table>
+
+---
+
+## 📱 Platform & Build
+
+<table>
+<tr>
+
+<td align="center" width="150">
+<img src="https://cdn.simpleicons.org/android/3DDC84" width="60"/><br/><br/>
+<b>Android</b><br/>
+<sub>API 35+</sub>
+</td>
+
+<td align="center" width="150">
+<img src="https://cdn.simpleicons.org/android/3DDC84" width="60"/><br/><br/>
+<b>Android NDK</b><br/>
+<sub>27.1.12297006</sub>
+</td>
+
+<td align="center" width="150">
+<img src="https://cdn.simpleicons.org/gradle/02303A" width="60"/><br/><br/>
+<b>Gradle</b><br/>
+<sub>Build System</sub>
+</td>
+
+</tr>
+
+<tr>
+
+<td align="center" width="150">
+<img src="https://cdn.simpleicons.org/xcode/147EFB" width="60"/><br/><br/>
+<b>Xcode</b><br/>
+<sub>iOS Build</sub>
+</td>
+
+<td align="center" width="150">
+<img src="https://cdn.simpleicons.org/openjdk/ED8B00" width="60"/><br/><br/>
+<b>Java</b><br/>
+<sub>17+</sub>
+</td>
+
+<td align="center" width="150">
+<img src="https://cdn.simpleicons.org/docker/2496ED" width="60"/><br/><br/>
+<b>Docker</b><br/>
+<sub>Container Build</sub>
+</td>
+
+</tr>
+</table>
+
+---
+
+## 🛠️ Development & Testing
+
+<table>
+<tr>
+
+<td align="center" width="140">
+<img src="https://cdn.simpleicons.org/babel/F9DC3E" width="60"/><br/><br/>
+<b>Babel</b><br/>
+<sub>v7.25.2</sub>
+</td>
+
+<td align="center" width="140">
+<img src="https://cdn.simpleicons.org/jest/C21325" width="60"/><br/><br/>
+<b>Jest</b><br/>
+<sub>v29.6.3</sub>
+</td>
+
+<td align="center" width="140">
+<img src="https://cdn.simpleicons.org/eslint/4B32C3" width="60"/><br/><br/>
+<b>ESLint</b><br/>
+<sub>v8.19.0</sub>
+</td>
+
+<td align="center" width="140">
+<img src="https://cdn.simpleicons.org/prettier/F7B93E" width="60"/><br/><br/>
+<b>Prettier</b><br/>
+<sub>v2.8.8</sub>
+</td>
+
+</tr>
+</table>
+
+---
+
+## 🐳 Deployment
+
+<table>
+<tr>
+
+<td align="center" width="180">
+<img src="https://cdn.simpleicons.org/docker/2496ED" width="65"/><br/><br/>
+<b>Docker</b><br/>
+<sub>Build Support</sub>
+</td>
+
+<td align="center" width="180">
+<img src="https://cdn.simpleicons.org/githubactions/2088FF" width="65"/><br/><br/>
+<b>GitHub Actions</b><br/>
+<sub>CI/CD Pipeline</sub>
+</td>
+
+</tr>
+</table>
 
 </div>
 
