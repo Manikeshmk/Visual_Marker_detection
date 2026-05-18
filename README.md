@@ -1,12 +1,13 @@
 APK Link: https://github.com/Manikeshmk/Visual_Marker_detection/actions/runs/26010986572/artifacts/7048843797
-Download the .zip file and extract the apk
-
+Download the .zip file and extract the zip. 
+app-release.apk will be shown, tap to install, open the app, grant camera permission
+You are ready to test my project.
 # Custom Visual Marker Detector
 
 A high-performance React Native Android application for real-time detection, extraction, and orientation correction of custom visual markers using advanced computer vision techniques.
 
 ## 🎨 Custom Marker Design
-
+Yes, I have designed my own custom marker,
 ### Marker Specifications
 
 The application is optimized for a **300×300 pixel custom square marker** with the following design:
@@ -23,10 +24,10 @@ The application is optimized for a **300×300 pixel custom square marker** with 
 │  │  │ (Orientation Marker)     │  │  │
 │  │  │ Top-Left, 20px offset    │  │  │
 │  │  └──────────────────────────┘  │  │
-│  │                                 │  │
-│  │  Content: Animal Drawings       │  │
-│  │  (Black lines on white)         │  │
-│  │                                 │  │
+│  │                                │  │
+│  │  Content: Animal Drawings      │  │
+│  │  (Black lines on white)        │  │
+│  │                                │  │
 │  └────────────────────────────────┘  │
 └──────────────────────────────────────┘
 ```
