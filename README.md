@@ -1,3 +1,5 @@
+APK Link:
+
 # Custom Visual Marker Detector
 
 A high-performance React Native Android application for real-time detection, extraction, and orientation correction of custom visual markers using advanced computer vision techniques.
