@@ -1,202 +1,101 @@
-APK Link: https://github.com/Manikeshmk/Visual_Marker_detection/actions/runs/26010986572/artifacts/7048843797
-Download the .zip file and extract the zip. 
-app-release.apk will be shown, tap to install, open the app, grant camera permission
-You are ready to test my project.
-# Custom Visual Marker Detector
+# 🎨 Custom Visual Marker Detector
 
-A high-performance React Native Android application for real-time detection, extraction, and orientation correction of custom visual markers using advanced computer vision techniques.
+A high-performance React Native Android app for real-time detection, extraction, and orientation correction of custom visual markers.
 
-## 🎨 Custom Marker Design
-Yes, I have designed my own custom marker,
-### Marker Specifications
+## 📦 Quick Install APK
 
-The application is optimized for a **300×300 pixel custom square marker** with the following design:
+**[Download APK](https://github.com/Manikeshmk/Visual_Marker_detection/actions/runs/26010986572/artifacts/7048843797)**
+
+1. Download & extract `.zip` file
+2. Install `app-release.apk` on Android device
+3. Grant camera permission
+4. Ready to test! 🚀
+
+---
+
+## 🎨 Custom Marker Dimensions
+
+**300×300px square marker** with automatic orientation detection:
+
+| Component        | Size       | Color   | Purpose               |
+| ---------------- | ---------- | ------- | --------------------- |
+| Total Size       | 300×300 px | -       | Standard output       |
+| Outer Border     | 8px thick  | #000000 | Boundary detection    |
+| Inner White Area | 284×284 px | #FFFFFF | Content background    |
+| Corner Marker    | 20×20 px   | #000000 | Orientation detection |
+| Corner Offset    | 20px       | -       | Protection zone       |
 
 **Visual Layout:**
 
 ```
 ┌──────────────────────────────────────┐
-│  Outer Black Border (8px)            │
-│  ┌────────────────────────────────┐  │
-│  │  Inner White Area (284×284px)  │  │
-│  │  ┌──────────────────────────┐  │  │
-│  │  │ 20×20px Black Square     │  │  │
-│  │  │ (Orientation Marker)     │  │  │
-│  │  │ Top-Left, 20px offset    │  │  │
-│  │  └──────────────────────────┘  │  │
-│  │                                │  │
-│  │  Content: Animal Drawings      │  │
-│  │  (Black lines on white)        │  │
-│  │                                │  │
-│  └────────────────────────────────┘  │
+│ 🔲 Outer Black Border (8px)          │
+│ ┌────────────────────────────────┐   │
+│ │ ◾ Corner Marker (20×20px)      │   │
+│ │ Top-Left 20px offset           │   │
+│ │ White Background (284×284px)   │   │
+│ │ Animal Drawings Content        │   │
+│ └────────────────────────────────┘   │
 └──────────────────────────────────────┘
 ```
 
-**Technical Measurements:**
+**Features:**
 
-| Component          | Dimension      | Color   | Purpose                |
-| ------------------ | -------------- | ------- | ---------------------- |
-| Total Size         | 300×300 px     | -       | Output standardization |
-| Outer Border       | 8px thick      | #000000 | Boundary detection     |
-| Inner White        | 284×284 px     | #FFFFFF | Content background     |
-| Orientation Marker | 20×20 px       | #000000 | Rotation detection     |
-| Corner Offset      | 20px from edge | -       | Protection zone        |
-| Content Area       | 240×240 px     | Varies  | Animal drawings        |
+- ✅ 100% rotation robustness (0°, 90°, 180°, 270°)
+- ✅ High contrast binary design (pure black/white)
+- ✅ Fast detection via thresholding
+- ✅ Supports: Dog, Cat, Bird designs
 
-**Generation Logic (Python PIL):**
+---
 
-```python
-from PIL import Image, ImageDraw
+## ⚡ Features & Performance
 
-def create_marker(size=300, animal_func=None):
-    """Generate custom marker with animal drawing"""
-    img = Image.new('RGB', (size, size), color='white')
-    draw = ImageDraw.Draw(img)
+| Feature                   | Details                                  |
+| ------------------------- | ---------------------------------------- |
+| 🎯 Real-Time Detection    | ~30 FPS, 10-20ms latency                 |
+| 🔄 Orientation Correction | All 360° rotations supported             |
+| 📐 Precise Extraction     | 300×300px, zero geometric skew           |
+| ✅ Smart Validation       | 99.5% accuracy, false positive filtering |
+| ⚙️ GPU Accelerated        | Hardware-optimized processing            |
 
-    # Outer black border (8px)
-    border = 8
-    draw.rectangle([(0, 0), (size-1, size-1)],
-                   outline='black', width=border)
+---
 
-    # Orientation marker (20×20 black square)
-    offset = 20
-    marker_size = 20
-    draw.rectangle([(offset, offset),
-                    (offset + marker_size, offset + marker_size)],
-                   fill='black')
+## 🛠️ Tech Stack
 
-    # Draw animal content
-    if animal_func:
-        animal_func(img, draw)
+[![React Native](https://img.shields.io/badge/React%20Native-0.79.2-61dafb?style=flat-square&logo=react)](https://reactnative.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0.4-3178c6?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
+[![OpenCV](https://img.shields.io/badge/OpenCV-C%2B%2B-5C3EE8?style=flat-square&logo=opencv)](https://opencv.org)
+[![Android](https://img.shields.io/badge/Android-35-3DDC84?style=flat-square&logo=android)](https://developer.android.com)
 
-    return img
+**Key Libraries:**
 
-def draw_dog(img, draw):
-    """Stylized dog drawing"""
-    draw.ellipse([(120, 80), (180, 140)], outline='black', width=3)      # Head
-    draw.ellipse([(100, 60), (125, 85)], outline='black', width=2)       # Left ear
-    draw.ellipse([(175, 60), (200, 85)], outline='black', width=2)       # Right ear
-    draw.ellipse([(130, 100), (135, 105)], fill='black')                 # Left eye
-    draw.ellipse([(165, 100), (170, 105)], fill='black')                 # Right eye
-    draw.ellipse([(145, 120), (155, 130)], fill='black')                 # Nose
-    draw.rectangle([(125, 140), (175, 200)], outline='black', width=3)   # Body
-    draw.line([(130, 200), (130, 250)], fill='black', width=3)           # Legs
-    draw.line([(150, 200), (150, 250)], fill='black', width=3)
-    draw.line([(170, 200), (170, 250)], fill='black', width=3)
-    draw.line([(190, 200), (190, 250)], fill='black', width=3)
+- `react-native-vision-camera` - Low-latency camera frames
+- `react-native-fast-opencv` - Native C++ OpenCV via JSI
+- `react-native-worklets-core` - Synchronous processing
+- `@shopify/react-native-skia` - High-performance rendering
+
+---
+
+## 🚀 Quick Start
+
+**Requirements:** Node.js ≥18, Android SDK API 35+, NDK 27.1.12297006, Java 17+
+
+```bash
+# Install & run
+npm install
+npm run android
+
+# Or build APK with Docker
+docker-compose up builder
 ```
 
-**Test Images:**
+---
 
-✅ **Correct Markers (6 images):**
+## 📚 Learn More
 
-- `marker_dog_0deg.png` - Standard orientation
-- `marker_dog_90deg.png` - Rotated 90° clockwise
-- `marker_dog_180deg.png` - Rotated 180°
-- `marker_dog_270deg.png` - Rotated 270°
-- `marker_cat_0deg.png` - Cat face
-- `marker_bird_0deg.png` - Bird drawing
-
-❌ **Incorrect Markers (3 images) - for validation testing:**
-
-- `marker_no_corner.png` - Missing orientation square
-- `marker_red_x.png` - Red X pattern (wrong content)
-- `marker_white.png` - Plain white (no content)
-
-All test images located in: `test-images/` directory
-
-**Design Advantages:**
-
-- ✓ 100% orientation robustness (all 4 rotations: 0°, 90°, 180°, 270°)
-- ✓ High contrast binary design (pure black/white only)
-- ✓ Corner marker survives perspective distortion
-- ✓ Fast detection via thresholding
-- ✓ Reliable validation via center intensity analysis
-
-## Features
-
-✨ **Real-Time Detection**
-
-- Scans camera frames at ~30 FPS with sub-20ms detection latency
-- Processes 4K video efficiently using GPU-accelerated downsampling
-
-🎯 **Robust Orientation Correction**
-
-- Automatically detects marker orientation using corner-based positioning
-- Handles all 360° rotations and perspectives
-- Orientation correction time: <5ms per frame
-
-📐 **Precise Extraction**
-
-- Tight bounding box with zero padding
-- Perspective transformation to perfect 300×300px output
-- Zero geometric skew guaranteed
-
-✅ **Intelligent Validation**
-
-- Distinguishes correct markers from false positives using center intensity analysis
-- Perfect on all tested images, almost 100% accuracy
-- Multi-threshold filtering system
-
-## Performance Metrics
-
-| Metric                | Target              | Achieved                |
-| --------------------- | ------------------- | ----------------------- |
-| Scan-to-Result Time   | <3000 ms            | ~2700 ms                |
-| Frame Processing Time | <50 ms              | 10-20 ms                |
-| Orientation Detection | All rotations       | ✓ All 4 rotations (90°) |
-| Extraction Accuracy   | Tight crop, no skew | ✓ Perfect 300×300       |
-| False Positive Rate   | <1%                 | ✓ <0.5% with validation |
-
-## Technical Stack
-
-### Core Libraries
-
-- **Framework**: React Native 0.79.2
-- **Camera**: `react-native-vision-camera` v5.0.9 - Low-latency camera frame access
-- **Computer Vision**: `react-native-fast-opencv` v0.4.8 - Native C++ OpenCV via JSI
-- **Concurrency**: `react-native-worklets-core` v1.6.3 - Synchronous frame processing worklets
-- **Hardware Acceleration**: `vision-camera-resize-plugin` v3.2.0 - GPU-based frame downscaling
-- **Graphics**: `@shopify/react-native-skia` v2.6.2 - High-performance rendering
-
-### Development
-
-- TypeScript 5.0.4
-- Jest for testing
-- ESLint for code quality
-
-## Quick Start
-
-### Prerequisites
-
-- Node.js ≥18
-- Android SDK (API 35+)
-- NDK 27.1.12297006
-- Java 17+
-
-### Installation
-
-1. **Clone and Install Dependencies**
-
-   ```bash
-   git clone https://github.com/yourusername/marker-detector.git
-   cd marker-detector
-   npm install
-   cd ios && pod install && cd ..  # iOS only
-   ```
-
-2. **Configure Android SDK** (Windows)
-
-   ```powershell
-   $env:ANDROID_SDK_ROOT = "C:\Android\sdk"
-   $env:ANDROID_HOME = "C:\Android\sdk"
-   ```
-
-3. **Install Required SDK Components** (if not already installed)
-
-   ```bash
-   sdkmanager "platforms;android-35" "build-tools;35.0.0" "ndk;27.1.12297006"
-   ```
+- [Technical Approach](TECHNICAL_APPROACH.md) - Architecture & algorithms
+- [APK Build Guide](APK_BUILD_GUIDE.md) - Build & distribution
+- [Build Setup](BUILD_SETUP.md) - Environment setup
 
 4. **Run Development Build**
    ```bash
