@@ -4,6 +4,18 @@
 
 ---
 
+## 📥 **Download APK**
+
+<div align="center">
+
+### **[⬇️ Download Latest APK v1.0.0](https://github.com/Manikeshmk/Visual_Marker_detection/releases/download/v1.0.0/app-release.apk)**
+
+*Test on your phone in seconds* • [GitHub Releases](https://github.com/Manikeshmk/Visual_Marker_detection/releases)
+
+</div>
+
+---
+
 ## 🌐 Languages & Tech Stack
 
 <div align="center">
