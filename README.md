@@ -1,4 +1,5 @@
-APK Link:
+APK Link: https://github.com/Manikeshmk/Visual_Marker_detection/actions/runs/26010986572/artifacts/7048843797
+Download the .zip file and extract the apk
 
 # Custom Visual Marker Detector
 
