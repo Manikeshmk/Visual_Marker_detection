@@ -1,3 +1,7 @@
+![Repo visits](https://hits.sh/github.com/Manikeshmk/Visual_Marker_detectionr.svg?label=repo%20visits)
+![GitHub stars](https://img.shields.io/github/stars/Manikeshmk/Visual_Marker_detection?style=logo&logo=github&label=⭐%20Stars) 
+![GitHub forks](https://img.shields.io/github/forks/Manikeshmk/Visual_Marker_detection?style=social)
+
 [![Repo visits](https://hits.sh/github.com/Manikeshmk/Visual_Marker_detection.svg?label=repo%20visits)](https://hits.sh/github.com/Manikeshmk/Visual_Marker_detection/)
 # 🎨 Custom Visual Marker Detector
 
