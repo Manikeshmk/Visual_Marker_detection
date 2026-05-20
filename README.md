@@ -1,3 +1,4 @@
+[![Repo visits](https://hits.sh/github.com/Manikeshmk/Visual_Marker_detection.svg?label=repo%20visits)](https://hits.sh/github.com/Manikeshmk/Visual_Marker_detection/)
 # 🎨 Custom Visual Marker Detector
 
 > Real-time computer vision marker detection & orientation correction on Android
